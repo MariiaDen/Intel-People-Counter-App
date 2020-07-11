@@ -46,6 +46,36 @@ In this work I've converted the TensorFlow model. As mentioned in the lesson, to
 
 I've selected the SSD Mobilenet v2  Model, since I read an article about its performance (https://arxiv.org/pdf/1704.04861.pdf), and in comparison to some other models its accuracy was higher. This seemed to work out for the given task. 
 
+To complete this task, I have referred to the following resources to get an idea: 
+- https://stackoverflow.com/questions/276052/how-to-get-current-cpu-and-ram-usage-in-python
+- http://euccas.github.io/blog/20170827/cpu-profiling-tools-on-linux.html
+
+The results of my experiment are following: 
+
+For pre- and post-convension the probabilities were:
+By 0.25: 
+- TensorFlow model: 0.94
+- IR FP32: 0.93
+- IR FP16: 0.92
+By 0.5:
+- TensorFlow model: 0.78
+- IR FP32: 0.77
+- IR FP16: 0.77
+
+The sizes are:
+- ssd_mobilenet_v2_coco FP32: before - 65MB, after - 63MB
+- ssd_mobilenet_v2_coco FP16: before - 65MB, after - 32MB
+
+The inference times:
+By 0.25: 
+- TensorFlow model: 144 ms
+- IR FP32: 69 ms
+- IR FP16: 68 ms
+By 0.5:
+- TensorFlow model: 116 ms
+- IR FP32: 69 ms
+- IR FP16: 69 ms
+
 ## Assess Model Use Cases
 
 Some of the potential use cases of the people counter app are:
