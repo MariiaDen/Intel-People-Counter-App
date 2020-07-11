@@ -53,10 +53,12 @@ To complete this task, I have referred to the following resources to get an idea
 The results of my experiment are following: 
 
 For pre- and post-convension the probabilities were:
+
 By 0.25: 
 - TensorFlow model: 0.94
 - IR FP32: 0.93
 - IR FP16: 0.92
+
 By 0.5:
 - TensorFlow model: 0.78
 - IR FP32: 0.77
@@ -67,10 +69,12 @@ The sizes are:
 - ssd_mobilenet_v2_coco FP16: before - 65MB, after - 32MB
 
 The inference times:
+
 By 0.25: 
 - TensorFlow model: 144 ms
 - IR FP32: 69 ms
 - IR FP16: 68 ms
+
 By 0.5:
 - TensorFlow model: 116 ms
 - IR FP32: 69 ms
